@@ -81,3 +81,5 @@ O aplicativo utiliza o serviço de IA da AFRAC, **Nota Certa**, para realizar a 
 ## Licença
 
 Este projeto está licenciado sob a **Licença MIT**.
+
+
