@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QHBoxLay
 class NcmApp(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Obter NCM")
+        self.setWindowTitle("Obter NCM V.1.0")
         self.resize(500, 400)
 
         # Widgets
