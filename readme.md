@@ -1,7 +1,3 @@
-Que bom que deu certo! Agora, para criar um README.md mais sofisticado e visualmente atraente, vamos incorporar alguns ícones e emojis para destacar as seções. Abaixo, segue uma versão mais estilizada do README.md:
-
----
-
 # 🚀 Aplicativo de Consulta de NCM com IA da AFRAC
 
 Este é um aplicativo desktop desenvolvido em **PyQt5** que permite ao usuário consultar o código **NCM** (Nomenclatura Comum do Mercosul) de produtos a partir de uma descrição. Utilizando a ferramenta de **Inteligência Artificial Nota Certa** da AFRAC, o aplicativo retorna o NCM mais relevante, acompanhado de percentuais de confiança.
