@@ -1,28 +1,29 @@
-### README.md
+Que bom que deu certo! Agora, para criar um README.md mais sofisticado e visualmente atraente, vamos incorporar alguns ícones e emojis para destacar as seções. Abaixo, segue uma versão mais estilizada do README.md:
 
-# Aplicativo de Consulta de NCM com IA da AFRAC
+---
 
-Este é um aplicativo desktop desenvolvido em PyQt5 que permite aos usuários inserir a descrição de um produto e obter o código **NCM** (Nomenclatura Comum do Mercosul) correspondente. O aplicativo faz uso da ferramenta de **Inteligência Artificial Nota Certa** da AFRAC para realizar a consulta e retornar o código NCM mais adequado, juntamente com os níveis de confiança.
+# 🚀 Aplicativo de Consulta de NCM com IA da AFRAC
 
-## Funcionalidades
+Este é um aplicativo desktop desenvolvido em **PyQt5** que permite ao usuário consultar o código **NCM** (Nomenclatura Comum do Mercosul) de produtos a partir de uma descrição. Utilizando a ferramenta de **Inteligência Artificial Nota Certa** da AFRAC, o aplicativo retorna o NCM mais relevante, acompanhado de percentuais de confiança.
 
-- **Entrada de Descrição do Produto**: Permite ao usuário inserir uma descrição do produto para consulta.
-- **Consulta de NCM via IA**: O aplicativo se conecta à API da Nota Certa para obter o NCM principal e outros possíveis NCMs relacionados.
-- **Exibição do Percentual de Confiança**: Exibe o NCM principal, o percentual de confiança e outros possíveis NCMs.
-- **Interface Intuitiva**: Interface gráfica amigável e moderna desenvolvida com PyQt5.
+## 🛠️ Funcionalidades
 
-## O que é o NCM?
+- 🔍 **Consulta de NCM**: Digite a descrição de um produto para obter seu código NCM utilizando IA.
+- 📊 **Percentual de Confiança**: Exibe o código NCM com o nível de confiança da predição.
+- 🖥️ **Interface Gráfica Intuitiva**: Desenvolvida em PyQt5, com uma experiência de usuário moderna e acessível.
 
-A **Nomenclatura Comum do Mercosul (NCM)** é um sistema de classificação utilizado para padronizar a identificação de mercadorias nos países do Mercosul. Cada código NCM é composto por 8 dígitos que descrevem a natureza e as características de cada produto.
+## ℹ️ O que é NCM?
 
-## Instalação
+A **Nomenclatura Comum do Mercosul (NCM)** é um sistema utilizado pelos países do Mercosul para padronizar a classificação de mercadorias. O código NCM é composto por 8 dígitos que descrevem o produto, sendo obrigatório para diversas transações comerciais.
+
+## ⚙️ Instalação
 
 ### Pré-requisitos
 
-- **Python 3.8** ou superior.
-- Conexão com a internet para acessar a API da Nota Certa.
+- 🐍 **Python 3.8+**
+- 🌐 Conexão com a internet para acessar a API da Nota Certa.
 
-### Passos
+### Passos de Instalação
 
 1. Clone o repositório:
    ```bash
@@ -30,7 +31,7 @@ A **Nomenclatura Comum do Mercosul (NCM)** é um sistema de classificação util
    cd ncm-app
    ```
 
-2. Instale as dependências necessárias com o `pip`:
+2. Instale as dependências:
    ```bash
    pip install -r requirements.txt
    ```
@@ -40,46 +41,57 @@ A **Nomenclatura Comum do Mercosul (NCM)** é um sistema de classificação util
    python ncm_app.py
    ```
 
-## Como Funciona
+## 🔧 Como Usar
 
-1. O usuário insere uma descrição do produto no campo apropriado.
-2. O aplicativo envia essa descrição para a **API da Nota Certa**, que utiliza IA para prever o NCM mais relevante.
-3. A API retorna uma lista de códigos NCM, sendo o principal exibido com seu percentual de confiança.
-4. Se disponíveis, outros possíveis NCMs e seus respectivos percentuais de confiança também são mostrados.
+1. ✏️ Digite a descrição do produto no campo correspondente.
+2. 🖱️ Clique em **Obter NCM** para realizar a consulta.
+3. 📋 O NCM principal e os NCMs alternativos, juntamente com os percentuais de confiança, serão exibidos.
 
-## API Utilizada
-
-O aplicativo utiliza o serviço de IA da AFRAC, **Nota Certa**, para realizar a consulta:
-- **Endpoint**: `https://afrac-ncm-demo.hf.space/api/predict`
-- **Método**: `POST`
-- **Payload**: Um objeto JSON com a descrição do produto.
-- **Resposta**: Uma lista de previsões de NCM com seus níveis de confiança.
-
-## Exemplo
+### Exemplo
 
 - **Entrada**: `Smartphone`
-- **Saída**: 
+- **Saída**:
   ```
   NCM Principal:
   NCM: 85171200
   Percentual de Confiança: 98.54%
-  
+
   Outros NCMs:
   NCM: 85176299
   Percentual de Confiança: 1.46%
   ```
 
-## Estrutura do Projeto
+## 🌐 API Utilizada
 
-- `ncm_app.py`: Script principal que contém a lógica da aplicação e a interface gráfica.
-  
-## Melhorias Futuras
+O aplicativo utiliza a API da **Nota Certa** da AFRAC para realizar a consulta de NCMs.
 
-- Melhorias no tratamento de erros de conexão com a API.
-- Função para copiar os resultados diretamente para a área de transferência.
+- **Endpoint**: `https://afrac-ncm-demo.hf.space/api/predict`
+- **Método**: `POST`
+- **Formato do Payload**:
+  ```json
+  {
+      "data": ["descrição do produto"]
+  }
+  ```
 
-## Licença
+- **Resposta**: A API retorna um NCM principal e outros possíveis NCMs com seus respectivos percentuais de confiança.
 
-Este projeto está licenciado sob a **Licença MIT**.
+## 🗂️ Estrutura do Projeto
 
+```bash
+ncm-app/
+│
+├── ncm_app.py          # Script principal com a lógica do aplicativo
+├── requirements.txt    # Dependências do projeto
+└── README.md           # Documentação do projeto
+```
 
+## 🔮 Melhorias Futuras
+
+- 🌐 **Melhorar o tratamento de erros** de conexão com a API.
+- 🔗 **Adicionar funcionalidade** para copiar os resultados para a área de transferência.
+- 💾 **Salvar histórico** de consultas realizadas.
+
+## 📄 Licença
+
+Este projeto está licenciado sob a **Licença MIT**. Sinta-se à vontade para usá-lo e modificá-lo conforme necessário.
